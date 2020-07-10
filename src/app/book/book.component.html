@@ -1,3 +1,8 @@
-<p>
-  {{hardcodedBookSample$ | async}}
-</p>
+<input #searchbox (keyup)="search(searchbox.value)">
+
+<div *ngFor='let book of searchResults$ | async'>
+  <p>title: {{book.title}}</p>
+  <p>author: {{book.author}}</p>
+  <p>image: {{book.image}}</p>
+  <p>edition key: {{book.edition_key}}</p>
+</div>

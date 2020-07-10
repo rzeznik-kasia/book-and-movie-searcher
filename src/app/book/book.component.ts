@@ -1,5 +1,4 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { Observable } from 'rxjs';
 
 import { BookService } from './services/book.service';
 
@@ -10,8 +9,11 @@ import { BookService } from './services/book.service';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class BookComponent {
-  hardcodedBookSample$: Observable<any> = this.bookService.hardcodedBookSample$;
-
+  searchResults$ = this.bookService.searchResults$;
   constructor(private bookService: BookService) { }
+
+  search(phrase: string) {
+    this.bookService.searchForBooks(phrase);
+  }
 
 }
