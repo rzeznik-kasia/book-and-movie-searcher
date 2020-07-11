@@ -1,6 +1,6 @@
-export interface IBook { 
+export interface IBookEdition { 
     title: string;
     author: string;
-    image: string;
+    bookCover: string;
     edition_key: string;
 }

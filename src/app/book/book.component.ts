@@ -9,11 +9,11 @@ import { BookService } from './services/book.service';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class BookComponent {
-  searchResults$ = this.bookService.searchResults$;
+  bookEditionsForSearchedPhrase$ = this.bookService.bookEditionsForSearchedPhrase$;
   constructor(private bookService: BookService) { }
 
   search(phrase: string) {
-    this.bookService.searchForBooks(phrase);
+    this.bookService.searchForBookEditions(phrase);
   }
 
 }
