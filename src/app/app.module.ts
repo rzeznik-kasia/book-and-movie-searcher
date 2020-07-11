@@ -4,18 +4,20 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BookComponent } from './book/book.component';
+import { BooksComponent } from './books/books.component';
+import { CoreModule } from './core/core.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    BookComponent
+    BooksComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
