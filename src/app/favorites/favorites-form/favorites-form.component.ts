@@ -20,7 +20,6 @@ export class FavoritesFormComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.favorite)
     this.favoriteForm.setValue({
       id: this.favorite.id || -1,
       listName: this.favorite.listName || '',
