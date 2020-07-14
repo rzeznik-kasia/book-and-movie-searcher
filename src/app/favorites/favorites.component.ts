@@ -21,7 +21,7 @@ export class FavoritesComponent {
 
   onEditFavorite(favorite) {
     this.tabsComponent.openTab(
-      `Editing ${favorite.listName}`,
+      `Editing: ${favorite.listName}`,
       this.favoritesFormTemplate,
       favorite,
       true
@@ -29,7 +29,7 @@ export class FavoritesComponent {
   }
 
   onAddFavorite() {
-    this.tabsComponent.openTab('New Favorite', this.favoritesFormTemplate, {}, true);
+    this.tabsComponent.openTab('New list', this.favoritesFormTemplate, {}, true);
   }
 
   onFavoriteFormSubmit(dataModel) {

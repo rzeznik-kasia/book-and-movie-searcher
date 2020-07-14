@@ -4,7 +4,7 @@
   </li>
 
   <li *ngFor="let tab of dynamicTabs" (click)="selectTab(tab)" [class.active]="tab.active" class="nav-item">
-    <a href="javascript:;" class="nav-link active" >{{tab.title}} <span class="tab-close" *ngIf="tab.isCloseable" (click)="closeTab(tab)">x</span></a>
+    <a href="javascript:;" class="nav-link active" >{{tab.title}} <span class="tab-close" *ngIf="tab.isCloseable" (click)="closeTab(tab)">&nbsp;&nbsp;&nbsp;X</span></a>
   </li>
 </ul>
 <ng-content></ng-content>

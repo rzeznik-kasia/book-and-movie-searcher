@@ -1,6 +1,5 @@
 <app-tabs>
-    <app-tab [tabTitle]="'Favorites'">
-      <h3>List of Favorites</h3>
+    <app-tab [tabTitle]="'All lists'">
       <app-favorites-list [favorites]="favorites" (addFavorite)="onAddFavorite()" (editFavorite)="onEditFavorite($event)">
       </app-favorites-list>
     </app-tab>
