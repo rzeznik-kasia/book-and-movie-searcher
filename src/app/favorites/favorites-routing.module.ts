@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { FavoritesComponent } from './favorites.component';
-import { FavoritesListComponent } from './favorites-list.component';
+import { FavoritesFormComponent } from './favorites-form/favorites-form.component';
+import { FavoritesListComponent } from './favorites-list/favorites-list.component';
 
 const routes: Routes = [
   { path: '', component: FavoritesComponent }
@@ -13,5 +14,5 @@ const routes: Routes = [
   exports: [ RouterModule ]
 })
 export class FavoritesRoutingModule {
-  static components = [ FavoritesComponent, FavoritesListComponent ];
+  static components = [ FavoritesComponent, FavoritesListComponent, FavoritesFormComponent ];
 }

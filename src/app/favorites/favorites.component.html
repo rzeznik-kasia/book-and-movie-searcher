@@ -5,3 +5,7 @@
       </favorites-list>
     </app-tab>
   </app-tabs>
+  
+  <ng-template let-favorite="inputToTab" #favoritesForm>
+    <app-favorites-form [favorite]="favorite" (saveFavorite)="onFavoriteFormSubmit($event)"></app-favorites-form>
+  </ng-template>

@@ -1,0 +1,17 @@
+<form [formGroup]="favoriteForm" (ngSubmit)="onFavoritesFormSubmit()">
+
+  <input type="hidden" formControlName="id">
+
+  <div class="form-group">
+    <label for="listName">List name</label>
+    <input type="text" class="form-control" id="listName" placeholder="List name" formControlName="listName">
+  </div>
+
+  <div class="form-group">
+    <label for="booksOnTheList">Books on the list</label>
+    <input type="text" class="form-control" id="booksOnTheList" placeholder="Books on the list"
+      formControlName="booksOnTheList">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Save</button>
+</form>

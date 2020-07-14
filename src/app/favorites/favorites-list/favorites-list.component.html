@@ -1,0 +1,15 @@
+<table class="table table-striped">
+  <thead>
+    <th>List name</th>
+    <th>Books on this list</th>
+    <th></th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let f of favorites">
+      <td>{{ f.listName }}</td>
+      <td>{{ f.booksOnTheList }}</td>
+      <td><button class="btn btn-sm btn-default" (click)="editFavorite.emit(f)">Edit</button></td>
+    </tr>
+  </tbody>
+</table>
+<button class="btn btn-default" (click)="addFavorite.emit()">Add new favorite</button>
