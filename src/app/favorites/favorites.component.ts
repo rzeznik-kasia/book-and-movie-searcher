@@ -14,7 +14,7 @@ export class FavoritesComponent {
 
   favorites = [
     {
-      id: '1',
+      id: 1,
       listName: 'my favorite list',
       booksOnTheList: 'Lord of the rings, Poems'
     }

@@ -17,7 +17,7 @@ export class FavoritesFormComponent implements OnInit {
       id: 0,
       listName: '',
       booksOnTheList: ''
-    } as IFavoritesBooks);
+    });
   }
 
   ngOnInit() {
