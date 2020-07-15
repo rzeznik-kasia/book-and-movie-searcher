@@ -1,8 +1,5 @@
-<input #searchbox (keyup)="search(searchbox.value)">
+<input #searchbox (keyup)="search(searchbox.value)" class="form-control mr-sm-2" type="text" placeholder="Search for books">
 
-<div *ngFor='let bookEdition of bookEditionsForSearchedPhrase$ | async'>
-  <p>title: {{bookEdition.title}}</p>
-  <p>author: {{bookEdition.author}}</p>
-  <p>book cover: {{bookEdition.bookCover}}</p>
-  <p>edition key: {{bookEdition.edition_key}}</p>
+<div *ngIf="bookEditionsForSearchedPhrase$ | async as booksEditions">
+  <app-books-card [bookEditions]="booksEditions"></app-books-card>
 </div>

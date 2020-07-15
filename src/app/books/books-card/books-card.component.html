@@ -1,0 +1,25 @@
+<table class="table table-striped">
+  <thead> 
+    <th>Title</th>
+    <th>Author</th>
+    <th>Book cover</th>
+    <th>Edition key</th>
+    <th></th>
+    <th></th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let bookEdition of bookEditions">
+      <td>{{bookEdition.title}}</td>
+      <td>{{bookEdition.author}}</td>
+      <td class="text-nowrap">{{bookEdition.bookCover}}</td>
+      <td>{{bookEdition.edition_key}}</td>
+      <td>
+        <a [routerLink]="['/books', bookEdition.id]" class="btn btn-primary btn-sm mr-2 text-nowrap">View book</a>
+      </td>
+      <td>
+        <button class="btn btn-secondary btn-sm text-nowrap" (click)="deleteWorkout(entry.id, addToListModal)">Add to
+          list</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
