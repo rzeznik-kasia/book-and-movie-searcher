@@ -1,11 +1,10 @@
 <div *ngIf="selectedBook$ | async as selectedBook" class="jumbotron">
-    <h3>Book details</h3>
+    <p class="lead">&nbsp;<span class="text-primary">{{selectedBook.title}}</span></p>
     <hr class="my-4">
-    <p class="lead">Title: {{selectedBook.title}}</p>
-    <p class="lead">Author: {{selectedBook.author_name}}</p>
-    <p class="lead">Publisher: {{selectedBook.publisher}}</p>
-    <p class="lead">Isbn: {{selectedBook.isbn}}</p>
-    <p class="lead">Number of pages: {{selectedBook.number_of_pages}}</p>
-    <p class="lead">Publish date: {{selectedBook.publish_date}}</p>
+    <p class="col-4">Author:&nbsp;<span class="text-primary col-8">{{selectedBook.author_name}}</span></p>
+    <p class="col-4"> Publisher:&nbsp;<span class="text-primary col-8">{{selectedBook.publisher}}</span></p>
+    <p class="col-4">Isbn:&nbsp;<span class="text-primary col-8">{{selectedBook.isbn}}</span></p>
+    <p class="col-4">Number of pages:&nbsp;<span class="text-primary col-8">{{selectedBook.number_of_pages}}</span></p>
+    <p class="col-4">Publish date:&nbsp;<span class="text-primary col-8">{{selectedBook.publish_date}}</span></p> 
   </div>
   
