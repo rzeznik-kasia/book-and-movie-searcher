@@ -11,7 +11,6 @@ import { IBookEdition } from '../../book-edition';
 export class BookEditionsService {
   private searchUrl = 'http://openlibrary.org/search.json';
   private coverUrl = 'http://covers.openlibrary.org/b/id/';
-  private bookUrl = 'https://openlibrary.org/api/books?jscmd=data&format=json&bibkeys=OLID:'
 
   private searchPhraseSubject = new Subject<string>();
   private searchPhraseAction$ = this.searchPhraseSubject.asObservable();

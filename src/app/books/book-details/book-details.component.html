@@ -1,1 +1,8 @@
-<p>book-details works!</p>
+<div *ngIf="selectedBook$ | async as selectedBook">
+    <p>{{selectedBook.publisher}}</p>
+    <p>{{selectedBook.isbn}}</p>
+    <p>{{selectedBook.title}}</p>
+    <p>{{selectedBook.number_of_pages}}</p>
+    <p>{{selectedBook.publish_date}}</p>
+    <p>{{selectedBook.author_name}}</p>
+</div>

@@ -8,13 +8,14 @@ import { BookDetailsService } from '../services/book-details/book-details.servic
   styleUrls: ['./book-details.component.scss']
 })
 export class BookDetailsComponent implements OnInit {
+  selectedBook$ = this.bookDetailsService.selectedBook$;
 
   constructor(private route: ActivatedRoute,
     private bookDetailsService: BookDetailsService) { }
 
   ngOnInit() {
-    const id = +this.route.snapshot.paramMap.get('olid');
-    
+    const id = this.route.snapshot.paramMap.get('olid');
+    this.bookDetailsService.onBookSelected(id);
   }
 
 }
