@@ -1,12 +1,17 @@
-import { TestBed } from '@angular/core/testing';
+import { TestBed, async } from '@angular/core/testing';
 
 import { BookEditionsService } from './book-editions.service';
 
 describe('BookEditionsService', () => {
-  beforeEach(() => TestBed.configureTestingModule({}));
-
-  it('should be created', () => {
-    const service: BookEditionsService = TestBed.get(BookEditionsService);
-    expect(service).toBeTruthy();
+  let bookEditionsService: BookEditionsService;
+  let mockHttp;
+  beforeEach(() => {
+    mockHttp = jasmine.createSpyObj('mockHttp', ['get']);
+    bookEditionsService = new BookEditionsService(mockHttp);
   });
-});
+
+  it('should call http.get with the right url', () => {
+    bookEditionsService.searchForBookEditions("lord");
+    expect(mockHttp.get).toHaveBeenCalledWith('http://openlibrary.org/search.json?q=lord');
+  });
+})

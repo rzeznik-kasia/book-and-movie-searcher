@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
-import { FavoritesSharingService } from './core/services/sharing/favorites-sharing.service';
+import { FavoritesSharingService } from './core/services/favorites-sharing.service';
 
 @NgModule({
   declarations: [

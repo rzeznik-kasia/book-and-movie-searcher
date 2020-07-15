@@ -1,6 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { TabsComponent } from '../shared/components/tabs/tabs.component';
-import { FavoritesSharingService } from '../core/services/sharing/favorites-sharing.service';
+import { FavoritesSharingService } from '../core/services/favorites-sharing.service';
 
 @Component({
   selector: 'app-favorites',
