@@ -4,8 +4,7 @@ import { BookDetailsService } from '../services/book-details/book-details.servic
 
 @Component({
   selector: 'app-book-details',
-  templateUrl: './book-details.component.html',
-  styleUrls: ['./book-details.component.scss']
+  templateUrl: './book-details.component.html'
 })
 export class BookDetailsComponent implements OnInit {
   selectedBook$ = this.bookDetailsService.selectedBook$;

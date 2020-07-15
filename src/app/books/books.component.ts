@@ -5,7 +5,6 @@ import { BookEditionsService } from './services/book-editions/book-editions.serv
 @Component({
   selector: 'app-books',
   templateUrl: './books.component.html',
-  styleUrls: ['./books.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class BooksComponent {
