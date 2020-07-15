@@ -1,5 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { TabsComponent } from '../shared/components/tabs/tabs.component';
+import { FavoritesSharingService } from '../core/services/sharing/favorites-sharing.service';
 
 @Component({
   selector: 'app-favorites',
@@ -7,9 +8,10 @@ import { TabsComponent } from '../shared/components/tabs/tabs.component';
   styleUrls: ['./favorites.component.scss']
 })
 export class FavoritesComponent {
-
   @ViewChild('favoritesForm', {static: false}) favoritesFormTemplate;
   @ViewChild(TabsComponent, {static: false}) tabsComponent;
+
+  constructor(private favoritesSharingService: FavoritesSharingService) { }
 
   favorites = [
     {

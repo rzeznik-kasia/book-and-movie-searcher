@@ -1,12 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Subject, BehaviorSubject } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 import { switchMap, map } from 'rxjs/operators';
 import { IBook } from '../../book';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class BookDetailsService {
   private bookUrl = 'https://openlibrary.org/api/books?jscmd=data&format=json&bibkeys=OLID:';
 

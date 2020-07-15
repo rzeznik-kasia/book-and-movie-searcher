@@ -5,9 +5,7 @@ import { switchMap, map, debounceTime, distinctUntilChanged } from 'rxjs/operato
 
 import { IBookEdition } from '../../book-edition';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class BookEditionsService {
   private searchUrl = 'http://openlibrary.org/search.json';
   private coverUrl = 'http://covers.openlibrary.org/b/id/';
