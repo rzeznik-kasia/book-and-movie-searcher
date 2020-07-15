@@ -1,5 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
-import { IBookEdition } from '../bookEdition';
+import { IBookEdition } from '../book-edition';
 
 @Component({
   selector: 'app-books-table',

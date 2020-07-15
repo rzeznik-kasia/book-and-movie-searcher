@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http'
 import { Subject } from 'rxjs';
 import { switchMap, map, debounceTime, distinctUntilChanged } from 'rxjs/operators';
 
-import { IBookEdition } from '../bookEdition';
+import { IBookEdition } from '../../book-edition';
 
 @Injectable({
   providedIn: 'root'

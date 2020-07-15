@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 
-import { BooksService } from './services/books.service';
+import { BookEditionsService } from './services/book-editions/book-editions.service';
 
 @Component({
   selector: 'app-books',
@@ -9,12 +9,12 @@ import { BooksService } from './services/books.service';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class BooksComponent {
-  bookEditionsForSearchedPhrase$ = this.booksService.bookEditionsForSearchedPhrase$;
+  bookEditionsForSearchedPhrase$ = this.bookEditionsService.bookEditionsForSearchedPhrase$;
   
-  constructor(private booksService: BooksService) { }
+  constructor(private bookEditionsService: BookEditionsService) { }
 
   search(phrase: string) {
-    this.booksService.searchForBookEditions(phrase);
+    this.bookEditionsService.searchForBookEditions(phrase);
   }
 
 }
