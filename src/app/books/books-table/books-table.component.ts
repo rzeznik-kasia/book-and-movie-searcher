@@ -2,12 +2,12 @@ import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core
 import { IBookEdition } from '../bookEdition';
 
 @Component({
-  selector: 'app-books-card',
-  templateUrl: './books-card.component.html',
-  styleUrls: ['./books-card.component.scss'],
+  selector: 'app-books-table',
+  templateUrl: './books-table.component.html',
+  styleUrls: ['./books-table.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class BooksCardComponent implements OnInit {
+export class BooksTableComponent implements OnInit {
   @Input() bookEditions: IBookEdition[] = [];
 
   constructor() { }

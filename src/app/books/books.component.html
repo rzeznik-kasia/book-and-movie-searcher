@@ -1,5 +1,5 @@
 <input #searchbox (keyup)="search(searchbox.value)" class="form-control mr-sm-2" type="text" placeholder="Search for books">
 
 <div *ngIf="bookEditionsForSearchedPhrase$ | async as booksEditions">
-  <app-books-card [bookEditions]="booksEditions"></app-books-card>
+  <app-books-table [bookEditions]="booksEditions"></app-books-table>
 </div>

@@ -14,7 +14,7 @@
       <td class="text-nowrap">{{bookEdition.bookCover}}</td>
       <td>{{bookEdition.edition_key}}</td>
       <td>
-        <a [routerLink]="['/books', bookEdition.id]" class="btn btn-primary btn-sm mr-2 text-nowrap">View book</a>
+        <a [routerLink]="['/books', bookEdition.edition_key]" class="btn btn-primary btn-sm mr-2 text-nowrap">View book</a>
       </td>
       <td>
         <button class="btn btn-secondary btn-sm text-nowrap" (click)="deleteWorkout(entry.id, addToListModal)">Add to
