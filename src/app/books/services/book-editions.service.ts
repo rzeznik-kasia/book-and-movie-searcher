@@ -8,7 +8,7 @@ import { IBookEdition } from '../bookEdition';
 @Injectable({
   providedIn: 'root'
 })
-export class BooksService {
+export class BookEditionsService {
   private searchUrl = 'http://openlibrary.org/search.json';
   private coverUrl = 'http://covers.openlibrary.org/b/id/';
   private bookUrl = 'https://openlibrary.org/api/books?jscmd=data&format=json&bibkeys=OLID:'
